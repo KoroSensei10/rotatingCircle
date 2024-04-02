@@ -132,27 +132,24 @@
 		canvas = tempCanvas;
 		ctx = tempctx;
 		centerX = canvas.width / 8;
-		centerY = canvas.height / 8;
+		centerY = canvas.height / 6;
 		draw();
 	});
 </script>
 
 <canvas width="1000" height="800" id="myCanvas"></canvas>
 <h2>Values :</h2>
-<ul>
-	<input type="range" id="frequency" name="frequency" min="1" max="10" bind:value={frequency} />
-	<label for="frequency">Frequency</label>
-	<input type="range" id="fps" name="fps" min="1" max="120" bind:value={fps} />
-	<label for="fps">FPS</label>
-</ul>
+<label for="frequency">Frequency : {frequency}</label>
+<br />
+<input type="range" id="frequency" name="frequency" min="1" max="10" bind:value={frequency} />
+<br />
+<label for="fps">FPS : {fps}</label>
+<br />
+<input type="range" id="fps" name="fps" min="1" max="120" bind:value={fps} />
+<br />
 
 <h2>TO DO :</h2>
 <ul>
-	<li>
-		Comprendre le paramètre du temps pour avoir une gestion précise de la fréquence (nombre de tour
-		par seconde)
-	</li>
-	<li>Corriger le "bug" de display plus rapide en fonction du framerate de l'écran</li>
 	<li>Pouvoir paramétrer toutes les variables</li>
 	<li>Pouvoir le faire via l'UI</li>
 	<li>Avoir un belle UI</li>
